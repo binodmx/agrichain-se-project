@@ -1,7 +1,8 @@
 <?php
 
 require 'db.php';
-$result = $mysqli->query("SELECT type_id,quantity FROM farmer_requests where active_status=1");
+
+$result = $mysqli->query("SELECT type_id,quantity,time FROM farmer_requests where active_status=1");
 if ($result->num_rows > 0) {
 
     $requests = array();
@@ -62,43 +63,36 @@ if ($result->num_rows > 0) {
         <?php
         if (count($requests) > 0) {
 
-        foreach ($requests as $m) { ?>
+        foreach ($requests
+
+        as $m) { ?>
         <tr>
 
-<!--            --><?php
-//              $time = $m['time'];
-//              $sql = $mysqli->query("DELETE FROM farmer_requests WHERE time = $time");
-//              if (!$sql) {
-//                  die('Could not delete data: ');
-//              }
-//              ?>
 
+            <form action="deactive_farmer_request.php" method="post">
 
+                <td> <?= $m['type_id'] ?></td>
+                <td> <?= $m['quantity'] ?></td>
+                <td>100</td>
+                <td><input class="btn btn-danger" type="submit" value="Update" name="update"></td>
+                <td><input class="btn btn-danger" type="submit" value="Delete" name="delete"></td>
+                 <td><input type="hidden" value="<?php echo $m['time']; ?>" name="time">  <td>
+                 <input type="hidden" name="destination" value="<?php echo $_SERVER["REQUEST_URI"]; ?>"/>
 
-            <td> <?= $m['type_id'] ?></td>
-            <td> <?= $m['quantity'] ?></td>
-            <td>100</td>
-<!--            <td>-->
-<!--                <button name="delete" type="submit" class="btn btn-primary"-->
-<!--                        onclick="--><?php //return delete_item() ?><!--">Update-->
-<!--                </button>-->
-<!--            </td>-->
-            <td>
-                <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-            
-            <?php }
-            }
-            else { ?>
-                <div class="row topfive-margin">
-                    <div class="col-lg-12">
+            </form>
+        </tr>
+                <?php }
+                }
+                else { ?>
+                    <div class="row topfive-margin">
+                        <div class="col-lg-12">
 
-                        <h2>No Data to dispaly</h2>
+                            <h2>No Data to dispaly</h2>
+
+                        </div>
 
                     </div>
-
-                </div>
-            <?php } ?>
+                <?php } ?>
 
     </table>
 
