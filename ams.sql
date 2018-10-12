@@ -31,7 +31,9 @@ CREATE TABLE `delivery` (
   `type` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `quantity` int(11) ,
-  `status` varchar(50) NOT NULL
+  `status` varchar(50) NOT NULL,
+    `dist_id` int(50) NOT NULL,
+    FOREIGN KEY (`dist_id`) REFERENCES `distributor_requests`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Table structure for table `distributor_requests`
@@ -55,7 +57,9 @@ CREATE TABLE `farmer_requests` (
   `time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `type` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `collected` tinyint(1) NOT NULL
+  `collected` tinyint(1) NOT NULL,
+  `del_id` int(10) NOT NULL,
+   FOREIGN KEY (`del_id`) REFERENCES `delivery`(`del_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -101,9 +105,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Indexes for delivery tables
 --
-
+ALTER TABLE `distributor_requests`
+  ADD PRIMARY KEY (`id`);
 --
 -- Indexes for table `farmer_requests`
 --
