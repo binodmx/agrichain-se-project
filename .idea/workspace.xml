@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11fd31a4-180a-4813-81a2-5bd96b48b700" name="Default Changelist" comment="Changed distributor table type int ==&gt; vachar&#10;creted new table for update delivery">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="11fd31a4-180a-4813-81a2-5bd96b48b700" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ams.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -88,23 +87,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="php" value="1" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="DBN-SQL" value="1" />
+          <entry key="HTML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="sql" value="60" />
+          <entry key="php" value="7" />
+          <entry key="sql" value="146" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="DBN-SQL" value="60" />
+          <entry key="DBN-SQL" value="146" />
+          <entry key="HTML" value="7" />
           <entry key="PLAIN_TEXT" value="85" />
         </counts>
       </usages-collector>
@@ -175,11 +178,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ams.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="390">
+              <caret line="119" column="2" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/collector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -234,6 +246,7 @@
         <option value="$PROJECT_DIR$/deactive_farmer_request.php" />
         <option value="$PROJECT_DIR$/edit_record_farmer.php" />
         <option value="$PROJECT_DIR$/ams.sql" />
+        <option value="$PROJECT_DIR$/collector.php" />
       </list>
     </option>
   </component>
@@ -301,12 +314,20 @@
       <workItem from="1539174421019" duration="58000" />
       <workItem from="1539174812463" duration="2182000" />
       <workItem from="1539259106230" duration="23566000" />
-      <workItem from="1539313870063" duration="2926000" />
+      <workItem from="1539313870063" duration="7968000" />
     </task>
+    <task id="LOCAL-00001" summary="Changed distributor table type int ==&gt; vachar&#10;creted new table for update delivery">
+      <created>1539331590195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539331590195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28732000" />
+    <option name="totallyTimeSpent" value="33774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -464,8 +485,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ams.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="390">
+          <caret line="119" column="2" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>
