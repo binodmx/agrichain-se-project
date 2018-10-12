@@ -23,18 +23,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
--- Table structure for table `delivery`
---
 
-CREATE TABLE `delivery` (
-  `del_id` int(11) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `quantity` int(11) ,
-  `status` varchar(50) NOT NULL,
-    `dist_id` int(50) NOT NULL,
-    FOREIGN KEY (`dist_id`) REFERENCES `distributor_requests`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Table structure for table `distributor_requests`
 --
@@ -58,9 +47,8 @@ CREATE TABLE `farmer_requests` (
   `type` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
   `collected` tinyint(1) NOT NULL,
-  `del_id` int(10) NOT NULL,
-   FOREIGN KEY (`del_id`) REFERENCES `delivery`(`del_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `del_id` int(10) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -83,7 +71,7 @@ CREATE TABLE `prices` (
 
 CREATE TABLE `shopkeeper_requests` (
   `email` varchar(100) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `time` timestamp NOT NULL  ON UPDATE CURRENT_TIMESTAMP,
   `type` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
   `recieved` tinyint(1) NOT NULL
@@ -103,6 +91,18 @@ CREATE TABLE `users` (
   `mobile no` varchar(12) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Table structure for table `delivery`
+--
+
+CREATE TABLE `delivery` (
+  `del_id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `quantity` int(11) ,
+  `status` varchar(50) NOT NULL,
+    `dist_id` int(50) NOT NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for delivery tables
