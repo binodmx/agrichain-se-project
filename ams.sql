@@ -23,14 +23,23 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+-- Table structure for table `delivery`
+--
 
+CREATE TABLE `delivery` (
+  `del_id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `quantity` int(11) ,
+  `status` varchar(50) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Table structure for table `distributor_requests`
 --
 
 CREATE TABLE `distributor_requests` (
   `id` int(11) NOT NULL,
-  `type` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
   `delivered` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
